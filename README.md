@@ -46,13 +46,13 @@ Get ready to enhance your Flutter app with this fantastic calendar package! With
 - In pubspec.yaml, add this dependency:
 
 ```yaml
-clean_calendar: 
+streak_calendar: 
 ```
 
 - Add this package to your project:
 
 ```dart
-import 'package:clean_calendar/clean_calendar.dart';
+import 'package:streak_calendar/src/streak_calendar.dart';
 ```
 
 ## Basic Usage

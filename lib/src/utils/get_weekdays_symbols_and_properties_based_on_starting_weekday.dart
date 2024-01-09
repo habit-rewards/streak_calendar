@@ -1,5 +1,5 @@
-import 'package:clean_calendar/clean_calendar.dart';
-import 'package:clean_calendar/src/utils/get_end_weekday_from_start_weekday.dat.dart';
+import 'package:streak_calendar/streak_calendar.dart';
+import 'package:streak_calendar/src/utils/get_end_weekday_from_start_weekday.dat.dart';
 
 List<String> getWeekdaysSymbolsListBasedOnStartingWeekday(
     {required WeekDay startWeekday, required Weekdays weekdaysSymbol}) {

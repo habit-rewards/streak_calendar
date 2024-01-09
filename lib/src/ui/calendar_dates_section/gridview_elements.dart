@@ -1,6 +1,6 @@
-import 'package:clean_calendar/src/models/calendar_properties.dart';
-import 'package:clean_calendar/src/utils/get_suitable_calendar_general_date_widget.dart';
-import 'package:clean_calendar/src/utils/get_suitable_calendar_streak_date_widget.dart';
+import 'package:streak_calendar/src/models/calendar_properties.dart';
+import 'package:streak_calendar/src/utils/get_suitable_calendar_general_date_widget.dart';
+import 'package:streak_calendar/src/utils/get_suitable_calendar_streak_date_widget.dart';
 import 'package:flutter/material.dart';
 
 class CalendarDateWidget extends StatelessWidget {

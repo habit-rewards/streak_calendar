@@ -1,5 +1,5 @@
-import 'package:clean_calendar/src/models/month_year_decoration.dart';
-import 'package:clean_calendar/src/models/navigator_decoration.dart';
+import 'package:streak_calendar/src/models/month_year_decoration.dart';
+import 'package:streak_calendar/src/models/navigator_decoration.dart';
 
 class HeaderProperties {
   /// - monthYearDecoration, changes the decoration of all months and years decoration in the header area of calendar.

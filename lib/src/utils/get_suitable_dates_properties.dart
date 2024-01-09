@@ -1,5 +1,5 @@
-import 'package:clean_calendar/src/models/calendar_properties.dart';
-import 'package:clean_calendar/src/models/dates_properties.dart';
+import 'package:streak_calendar/src/models/calendar_properties.dart';
+import 'package:streak_calendar/src/models/dates_properties.dart';
 
 DatesProperties getSuitableDatesProperties({
   required CalendarProperties calendarProperties,

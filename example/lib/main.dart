@@ -1,4 +1,4 @@
-import 'package:clean_calendar/clean_calendar.dart';
+import 'package:streak_calendar/streak_calendar.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());

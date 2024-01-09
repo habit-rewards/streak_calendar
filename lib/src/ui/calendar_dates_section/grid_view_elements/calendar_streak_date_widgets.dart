@@ -1,11 +1,11 @@
-import 'package:clean_calendar/src/models/calendar_properties.dart';
-import 'package:clean_calendar/src/models/dates_properties.dart';
-import 'package:clean_calendar/src/utils/get_end_weekday_from_start_weekday.dat.dart';
-import 'package:clean_calendar/src/utils/get_suitable_dates_on_tap.dart';
-import 'package:clean_calendar/src/utils/get_suitable_dates_properties.dart';
-import 'package:clean_calendar/src/utils/get_widget_center_offset_info.dart';
-import 'package:clean_calendar/src/utils/simulate_tap_on_an_offset.dart';
-import 'package:clean_calendar/src/utils/space_fixer.dart';
+import 'package:streak_calendar/src/models/calendar_properties.dart';
+import 'package:streak_calendar/src/models/dates_properties.dart';
+import 'package:streak_calendar/src/utils/get_end_weekday_from_start_weekday.dat.dart';
+import 'package:streak_calendar/src/utils/get_suitable_dates_on_tap.dart';
+import 'package:streak_calendar/src/utils/get_suitable_dates_properties.dart';
+import 'package:streak_calendar/src/utils/get_widget_center_offset_info.dart';
+import 'package:streak_calendar/src/utils/simulate_tap_on_an_offset.dart';
+import 'package:streak_calendar/src/utils/space_fixer.dart';
 import 'package:flutter/material.dart';
 
 /// Only use Ink if its parent is a button otherwise it will act weird such as this https://github.com/flutter/flutter/issues/73315

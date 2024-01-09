@@ -1,9 +1,9 @@
-import 'package:clean_calendar/src/models/calendar_properties.dart';
-import 'package:clean_calendar/src/models/dates_properties.dart';
-import 'package:clean_calendar/src/utils/get_suitable_dates_on_tap.dart';
-import 'package:clean_calendar/src/utils/get_suitable_dates_properties.dart';
-import 'package:clean_calendar/src/utils/get_widget_center_offset_info.dart';
-import 'package:clean_calendar/src/utils/simulate_tap_on_an_offset.dart';
+import 'package:streak_calendar/src/models/calendar_properties.dart';
+import 'package:streak_calendar/src/models/dates_properties.dart';
+import 'package:streak_calendar/src/utils/get_suitable_dates_on_tap.dart';
+import 'package:streak_calendar/src/utils/get_suitable_dates_properties.dart';
+import 'package:streak_calendar/src/utils/get_widget_center_offset_info.dart';
+import 'package:streak_calendar/src/utils/simulate_tap_on_an_offset.dart';
 import 'package:flutter/material.dart';
 
 class CalendarGeneralDenseDate extends StatelessWidget {

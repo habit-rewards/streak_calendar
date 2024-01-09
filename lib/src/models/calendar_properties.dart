@@ -1,12 +1,12 @@
-import 'package:clean_calendar/src/models/dates_decoration.dart';
-import 'package:clean_calendar/src/models/dates_properties.dart';
-import 'package:clean_calendar/src/models/header_properties.dart';
-import 'package:clean_calendar/src/models/month_year_decoration.dart';
-import 'package:clean_calendar/src/models/months_model.dart';
-import 'package:clean_calendar/src/models/navigator_decoration.dart';
-import 'package:clean_calendar/src/models/weekdays_decoration.dart';
-import 'package:clean_calendar/src/models/weekdays_model.dart';
-import 'package:clean_calendar/src/models/weekdays_properties.dart';
+import 'package:streak_calendar/src/models/dates_decoration.dart';
+import 'package:streak_calendar/src/models/dates_properties.dart';
+import 'package:streak_calendar/src/models/header_properties.dart';
+import 'package:streak_calendar/src/models/month_year_decoration.dart';
+import 'package:streak_calendar/src/models/months_model.dart';
+import 'package:streak_calendar/src/models/navigator_decoration.dart';
+import 'package:streak_calendar/src/models/weekdays_decoration.dart';
+import 'package:streak_calendar/src/models/weekdays_model.dart';
+import 'package:streak_calendar/src/models/weekdays_properties.dart';
 import 'package:flutter/material.dart';
 
 /// - WeekDay, Provides different weekdays.

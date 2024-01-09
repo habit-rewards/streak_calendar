@@ -1,4 +1,4 @@
-import 'package:clean_calendar/src/models/calendar_properties.dart';
+import 'package:streak_calendar/src/models/calendar_properties.dart';
 import 'package:flutter/material.dart';
 
 class PageControllerState extends ChangeNotifier {

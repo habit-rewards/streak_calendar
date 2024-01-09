@@ -1,4 +1,4 @@
-import 'package:clean_calendar/src/models/dates_decoration.dart';
+import 'package:streak_calendar/src/models/dates_decoration.dart';
 
 class DatesProperties {
   /// - datesDecoration, changes the dates decoration.

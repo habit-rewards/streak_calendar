@@ -32,7 +32,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  clean_calendar:
+  streak_calendar:
     path: ../
 
   # The following adds the Cupertino Icons font to your application.

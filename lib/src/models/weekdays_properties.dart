@@ -1,4 +1,4 @@
-import 'package:clean_calendar/src/models/weekdays_decoration.dart';
+import 'package:streak_calendar/src/models/weekdays_decoration.dart';
 
 class WeekdaysProperties {
   /// - generalWeekdaysDecoration, changes the decoration of all weekdays except for which user has provided specific weekday decoration.

@@ -1,6 +1,6 @@
-import 'package:clean_calendar/src/models/calendar_properties.dart';
-import 'package:clean_calendar/src/state/page_controller.dart';
-import 'package:clean_calendar/src/ui/calendar_dates_section/gridview_builders.dart';
+import 'package:streak_calendar/src/models/calendar_properties.dart';
+import 'package:streak_calendar/src/state/page_controller.dart';
+import 'package:streak_calendar/src/ui/calendar_dates_section/gridview_builders.dart';
 import 'package:flutter/material.dart';
 
 class ScrollablePageViewBuilder extends StatelessWidget {

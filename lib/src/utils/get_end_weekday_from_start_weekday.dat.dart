@@ -1,4 +1,4 @@
-import 'package:clean_calendar/src/models/calendar_properties.dart';
+import 'package:streak_calendar/src/models/calendar_properties.dart';
 
 int getEndWeekdayFromStartWeekday({required int startWeekday}) {
   final int endWeekday;

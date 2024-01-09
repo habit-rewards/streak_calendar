@@ -1,6 +1,6 @@
-import 'package:clean_calendar/src/models/calendar_properties.dart';
-import 'package:clean_calendar/src/models/weekdays_decoration.dart';
-import 'package:clean_calendar/src/utils/get_weekdays_symbols_and_properties_based_on_starting_weekday.dart';
+import 'package:streak_calendar/src/models/calendar_properties.dart';
+import 'package:streak_calendar/src/models/weekdays_decoration.dart';
+import 'package:streak_calendar/src/utils/get_weekdays_symbols_and_properties_based_on_starting_weekday.dart';
 import 'package:flutter/material.dart';
 
 class CalendarWeekdayHeaderSection extends StatelessWidget {

@@ -1,7 +1,7 @@
-library clean_calendar;
+library streak_calendar;
 
-import 'package:clean_calendar/clean_calendar.dart';
-import 'package:clean_calendar/src/ui/calendar_view.dart';
+import 'package:streak_calendar/streak_calendar.dart';
+import 'package:streak_calendar/src/ui/calendar_view.dart';
 import 'package:flutter/material.dart';
 
 class CleanCalendar extends StatelessWidget {
