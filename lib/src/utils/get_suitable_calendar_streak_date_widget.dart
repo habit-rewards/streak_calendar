@@ -7,21 +7,23 @@ class GetSuitableCalendarStreakDateWidget extends StatelessWidget {
       {Key? key,
       required this.calendarProperties,
       required this.pageViewElementDate,
-      required this.pageViewDate})
+      required this.pageViewDate,
+      required this.datesForStreaks})
       : super(key: key);
 
   final CalendarProperties calendarProperties;
   final DateTime pageViewElementDate;
   final DateTime pageViewDate;
+  final List<DateTime> datesForStreaks;
 
   @override
   Widget build(BuildContext context) {
     /// Called when streak date have streak date just before and just after also.
-    if (calendarProperties.datesForStreaks
+    if (datesForStreaks
             .contains(pageViewElementDate.add(const Duration(days: 1))) &&
-        calendarProperties.datesForStreaks
+        datesForStreaks
             .contains(pageViewElementDate.subtract(const Duration(days: 1))) &&
-        calendarProperties.datesForStreaks.contains(pageViewElementDate)) {
+        datesForStreaks.contains(pageViewElementDate)) {
       if (calendarProperties.enableDenseViewForDates &&
           calendarProperties.enableDenseSplashForDates) {
         return CalendarStreakBetweenDenseSplashDate(
@@ -49,7 +51,7 @@ class GetSuitableCalendarStreakDateWidget extends StatelessWidget {
     }
 
     /// Called when streak date have a streak date just after.
-    if (calendarProperties.datesForStreaks
+    if (datesForStreaks
         .contains(pageViewElementDate.add(const Duration(days: 1)))) {
       if (calendarProperties.enableDenseViewForDates &&
           calendarProperties.enableDenseSplashForDates) {
@@ -78,7 +80,7 @@ class GetSuitableCalendarStreakDateWidget extends StatelessWidget {
     }
 
     /// Called when streak date have a streak date just before.
-    if (calendarProperties.datesForStreaks
+    if (datesForStreaks
         .contains(pageViewElementDate.subtract(const Duration(days: 1)))) {
       if (calendarProperties.enableDenseViewForDates &&
           calendarProperties.enableDenseSplashForDates) {
@@ -107,7 +109,7 @@ class GetSuitableCalendarStreakDateWidget extends StatelessWidget {
     }
 
     /// Called when streak date doesn't have streak date just before and just after also.
-    if (calendarProperties.datesForStreaks.contains(pageViewElementDate)) {
+    if (datesForStreaks.contains(pageViewElementDate)) {
       if (calendarProperties.enableDenseViewForDates &&
           calendarProperties.enableDenseSplashForDates) {
         return CalendarStreakSingleDenseSplashDate(

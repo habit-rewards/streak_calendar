@@ -78,6 +78,12 @@ class CalendarProperties {
   /// Streak dates properties.
   final DatesProperties streakDatesProperties;
 
+  /// Skip dates properties.
+  final DatesProperties skipDatesProperties;
+
+  /// Fail dates properties.
+  final DatesProperties failDatesProperties;
+
   /// Current date properties.
   final DatesProperties currentDateProperties;
 
@@ -120,6 +126,12 @@ class CalendarProperties {
   /// List of streak dates.
   final List<DateTime> datesForStreaks;
 
+  /// List of streak dates.
+  final List<DateTime> datesForSkips;
+
+  /// List of streak dates.
+  final List<DateTime> datesForFails;
+
   /// List of selected dates.
   final List<DateTime> selectedDates;
 
@@ -148,6 +160,8 @@ class CalendarProperties {
     HeaderProperties? headerProperties,
     WeekdaysProperties? weekdaysProperties,
     DatesProperties? streakDatesProperties,
+    DatesProperties? skipDatesProperties,
+    DatesProperties? failDatesProperties,
     DatesProperties? currentDateProperties,
     DatesProperties? generalDatesProperties,
     DatesProperties? leadingTrailingDatesProperties,
@@ -162,6 +176,8 @@ class CalendarProperties {
     DateTime? initialViewMonthDateTime,
     DateTime? currentDateOfCalendar,
     List<DateTime>? datesForStreaks,
+    List<DateTime>? datesForSkips,
+    List<DateTime>? datesForFails,
     List<DateTime>? selectedDates,
     this.onSelectedDates,
     this.onCalendarViewDate,
@@ -291,6 +307,50 @@ class CalendarProperties {
                       12),
           disable: streakDatesProperties?.disable ?? false,
           hide: streakDatesProperties?.hide ?? false,
+        ),
+
+        /// Setting streakDatesProperties properties.
+        skipDatesProperties = DatesProperties(
+          datesDecoration: DatesDecoration(
+              datesBackgroundColor: skipDatesProperties
+                      ?.datesDecoration?.datesBackgroundColor ??
+                  Theme.of(context).colorScheme.surfaceVariant,
+              datesTextColor:
+                  skipDatesProperties?.datesDecoration?.datesTextColor ??
+                      Theme.of(context).colorScheme.onSurfaceVariant,
+              datesTextStyle:
+                  skipDatesProperties?.datesDecoration?.datesTextStyle ??
+                      const TextStyle(),
+              datesBorderColor:
+                  skipDatesProperties?.datesDecoration?.datesBorderColor ??
+                      Theme.of(context).colorScheme.onSurface,
+              datesBorderRadius:
+                  skipDatesProperties?.datesDecoration?.datesBorderRadius ??
+                      12),
+          disable: skipDatesProperties?.disable ?? false,
+          hide: skipDatesProperties?.hide ?? false,
+        ),
+
+        /// Setting streakDatesProperties properties.
+        failDatesProperties = DatesProperties(
+          datesDecoration: DatesDecoration(
+              datesBackgroundColor: failDatesProperties
+                      ?.datesDecoration?.datesBackgroundColor ??
+                  Theme.of(context).colorScheme.surfaceVariant,
+              datesTextColor:
+                  failDatesProperties?.datesDecoration?.datesTextColor ??
+                      Theme.of(context).colorScheme.onSurfaceVariant,
+              datesTextStyle:
+                  failDatesProperties?.datesDecoration?.datesTextStyle ??
+                      const TextStyle(),
+              datesBorderColor:
+                  failDatesProperties?.datesDecoration?.datesBorderColor ??
+                      Theme.of(context).colorScheme.onSurface,
+              datesBorderRadius:
+                  failDatesProperties?.datesDecoration?.datesBorderRadius ??
+                      12),
+          disable: failDatesProperties?.disable ?? false,
+          hide: failDatesProperties?.hide ?? false,
         ),
 
         /// Setting currentDateProperties properties.
@@ -446,6 +506,16 @@ class CalendarProperties {
                 ?.map((e) => DateTime.utc(e.year, e.month, e.day))
                 .toList() ??
             [],
+        
+        datesForSkips = datesForSkips
+                ?.map((e) => DateTime.utc(e.year, e.month, e.day))
+                .toList() ??
+            [],
+
+        datesForFails = datesForFails
+                ?.map((e) => DateTime.utc(e.year, e.month, e.day))
+                .toList() ??
+            [],
 
         /// Setting selectedDates value.
         selectedDates = selectedDates
@@ -495,6 +565,8 @@ class CalendarProperties {
           runtimeType == other.runtimeType &&
           weekdaysProperties == other.weekdaysProperties &&
           streakDatesProperties == other.streakDatesProperties &&
+          skipDatesProperties == other.skipDatesProperties &&
+          failDatesProperties == other.failDatesProperties &&
           currentDateProperties == other.currentDateProperties &&
           generalDatesProperties == other.generalDatesProperties &&
           leadingTrailingDatesProperties ==
@@ -511,6 +583,8 @@ class CalendarProperties {
           initialViewMonthDateTime == other.initialViewMonthDateTime &&
           currentDateOfCalendar == other.currentDateOfCalendar &&
           datesForStreaks == other.datesForStreaks &&
+          datesForSkips == other.datesForSkips &&
+          datesForFails == other.datesForFails &&
           selectedDates == other.selectedDates &&
           onSelectedDates == other.onSelectedDates &&
           onCalendarViewDate == other.onCalendarViewDate &&
@@ -524,6 +598,8 @@ class CalendarProperties {
   int get hashCode =>
       weekdaysProperties.hashCode ^
       streakDatesProperties.hashCode ^
+      skipDatesProperties.hashCode ^
+      failDatesProperties.hashCode ^
       currentDateProperties.hashCode ^
       generalDatesProperties.hashCode ^
       leadingTrailingDatesProperties.hashCode ^
@@ -538,6 +614,8 @@ class CalendarProperties {
       initialViewMonthDateTime.hashCode ^
       currentDateOfCalendar.hashCode ^
       datesForStreaks.hashCode ^
+      datesForSkips.hashCode ^
+      datesForFails.hashCode ^
       selectedDates.hashCode ^
       onSelectedDates.hashCode ^
       onCalendarViewDate.hashCode ^
@@ -551,6 +629,6 @@ class CalendarProperties {
   // when using the print statement.
   @override
   String toString() {
-    return 'CalendarProperties{weekdaysProperties: $weekdaysProperties, streakDatesProperties: $streakDatesProperties, currentDateProperties: $currentDateProperties, generalDatesProperties: $generalDatesProperties, leadingTrailingDatesProperties: $leadingTrailingDatesProperties, selectedDatesProperties: $selectedDatesProperties, selectedRangeBetweenDatesProperties: $selectedRangeBetweenDatesProperties, enableDenseViewForDates: $enableDenseViewForDates, enableDenseSplashForDates: $enableDenseSplashForDates, startDateOfCalendar: $startDateOfCalendar, endDateOfCalendar: $endDateOfCalendar, dateSelectionMode: $dateSelectionMode, disablePastDates: $disablePastDates, initialViewMonthDateTime: $initialViewMonthDateTime, currentDateOfCalendar: $currentDateOfCalendar, datesForStreaks: $datesForStreaks,  selectedDates: $selectedDates, onSelectedDates: $onSelectedDates, onCalendarViewDate: $onCalendarViewDate, datePickerCalendarView: $datePickerCalendarView, startWeekday: $startWeekday, weekdaysSymbol: $weekdaysSymbol, monthsSymbol: $monthsSymbol, context: $context}';
+    return 'CalendarProperties{weekdaysProperties: $weekdaysProperties, streakDatesProperties: $streakDatesProperties, skipDatesProperties: $skipDatesProperties, failDatesProperties: $failDatesProperties, currentDateProperties: $currentDateProperties, generalDatesProperties: $generalDatesProperties, leadingTrailingDatesProperties: $leadingTrailingDatesProperties, selectedDatesProperties: $selectedDatesProperties, selectedRangeBetweenDatesProperties: $selectedRangeBetweenDatesProperties, enableDenseViewForDates: $enableDenseViewForDates, enableDenseSplashForDates: $enableDenseSplashForDates, startDateOfCalendar: $startDateOfCalendar, endDateOfCalendar: $endDateOfCalendar, dateSelectionMode: $dateSelectionMode, disablePastDates: $disablePastDates, initialViewMonthDateTime: $initialViewMonthDateTime, currentDateOfCalendar: $currentDateOfCalendar, datesForStreaks: $datesForStreaks, datesForSkips: $datesForSkips, datesForFails: $datesForFails, selectedDates: $selectedDates, onSelectedDates: $onSelectedDates, onCalendarViewDate: $onCalendarViewDate, datePickerCalendarView: $datePickerCalendarView, startWeekday: $startWeekday, weekdaysSymbol: $weekdaysSymbol, monthsSymbol: $monthsSymbol, context: $context}';
   }
 }
