@@ -783,7 +783,7 @@ class CalendarStreakBetweenDenseSplashDate extends StatelessWidget {
                                   BorderSide(color: datesBorderColor, width: 1),
                             )
                           : null,
-                      color: datesBorderColor,
+                      color: datesBackgroundColor,
                     ),
                   ),
                 ),
@@ -864,7 +864,7 @@ class CalendarStreakBetweenDenseSplashDate extends StatelessWidget {
                               horizontal:
                                   BorderSide(color: datesBorderColor, width: 1))
                           : null,
-                      color: datesBorderColor,
+                      color: datesBackgroundColor,
                     ),
                   ),
                 ),
@@ -1342,14 +1342,11 @@ class CalendarStreakEndDenseSplashDate extends StatelessWidget {
                             : 0),
                     decoration: BoxDecoration(
                       border: datesBorderColor != null
-                          // ? Border.all(
-                          //     color: datesBorderColor, width: 1)
-                          // : null,
                           ? Border.symmetric(
                               horizontal:
                                   BorderSide(color: datesBorderColor, width: 1))
                           : null,
-                      color: datesBorderColor,
+                      color: datesBackgroundColor,
                     ),
                   ),
                 ),
@@ -1409,10 +1406,6 @@ class CalendarStreakEndDenseSplashDate extends StatelessWidget {
                           child: Container(
                             //Replace here with Ink after this fix https://github.com/flutter/flutter/issues/73315
                             decoration: BoxDecoration(
-                              // border: datesBorderColor != null
-                              //     ? Border.all(
-                              //         color: datesBorderColor, width: 1)
-                              //     : null,
                               border: datesBorderColor != null
                                   ? Border(
                                       top: BorderSide(color: datesBorderColor, width: 1),
