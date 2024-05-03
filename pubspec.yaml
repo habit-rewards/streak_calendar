@@ -1,6 +1,6 @@
 name: streak_calendar
 description: A Flutter calendar package that enables you to make a simple and customizable calendar with streaks.
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/habit-rewards/streak_calendar
 repository: https://github.com/habit-rewards/streak_calendar
 issue_tracker: https://github.com/habit-rewards/streak_calendar/issues

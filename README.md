@@ -11,7 +11,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-[![pub package](https://img.shields.io/pub/v/clean_calendar.svg)](https://pub.dev/packages/clean_calendar) [![wakatime](https://wakatime.com/badge/user/83f3b15d-49de-4c01-b8de-bbc132f11be1/project/310945fd-a5ea-459c-a522-8048d1a86a33.svg)](https://wakatime.com/badge/user/83f3b15d-49de-4c01-b8de-bbc132f11be1/project/310945fd-a5ea-459c-a522-8048d1a86a33)
+[![pub package](https://img.shields.io/pub/v/clean_calendar.svg)](https://pub.dev/packages/streak_calendar/) [![wakatime](https://wakatime.com/badge/user/83f3b15d-49de-4c01-b8de-bbc132f11be1/project/310945fd-a5ea-459c-a522-8048d1a86a33.svg)](https://wakatime.com/badge/user/83f3b15d-49de-4c01-b8de-bbc132f11be1/project/310945fd-a5ea-459c-a522-8048d1a86a33)
 
 ## Word from creator
 
