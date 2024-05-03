@@ -21,6 +21,7 @@ class CalendarWeekdayHeaderSection extends StatelessWidget {
             startWeekday: calendarProperties.startWeekday,
             weekdaysProperties: calendarProperties.weekdaysProperties);
     return GridView.builder(
+      padding: EdgeInsets.zero,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         childAspectRatio: 1,
         crossAxisCount: 7,
