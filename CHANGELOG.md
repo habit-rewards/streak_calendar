@@ -1,3 +1,7 @@
+## 1.1.1
+
+* Prevent the streak dates to extend to the next row.
+
 ## 1.1.0
 
 * Added ```headerProperties``` for changing properties of header section. [#1](https://github.com/chaudharydeepanshu/clean_calendar/issues/1)
