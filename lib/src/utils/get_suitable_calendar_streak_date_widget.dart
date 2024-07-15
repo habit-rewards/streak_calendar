@@ -19,11 +19,24 @@ class GetSuitableCalendarStreakDateWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     /// Called when streak date have streak date just before and just after also.
+    // page element weekday starts from 1: monday, ends in 7: sunday
+
+    var startWeekday = calendarProperties.startWeekday;
+    var endWeekday = startWeekday == WeekDay.sunday ? WeekDay.saturday : WeekDay.sunday;
+    // page element weekday starts from 1: monday, ends in 7: sunday
+    // startWeekday or endWeekday, starts from 0: monday, ends in 6: sunday.
+    var startWeekdayIndex = startWeekday.index + 1;
+    var endWeekdayIndex = endWeekday.index + 1;
+
+    // print("pageview element date ${this.pageViewElementDate} ${this.pageViewElementDate.weekday}");
+    // print("start week day ${calendarProperties.startWeekday} ${startWeekday.index + 1}");
+    // print("end week day ${endWeekday} ${endWeekday.index + 1}");
+
     if (datesForStreaks
             .contains(pageViewElementDate.add(const Duration(days: 1))) &&
         datesForStreaks
             .contains(pageViewElementDate.subtract(const Duration(days: 1))) &&
-        datesForStreaks.contains(pageViewElementDate)) {
+        datesForStreaks.contains(pageViewElementDate) && pageViewElementDate.weekday != endWeekdayIndex && pageViewElementDate.weekday != startWeekdayIndex) {
       if (calendarProperties.enableDenseViewForDates &&
           calendarProperties.enableDenseSplashForDates) {
         return CalendarStreakBetweenDenseSplashDate(
@@ -52,7 +65,7 @@ class GetSuitableCalendarStreakDateWidget extends StatelessWidget {
 
     /// Called when streak date have a streak date just after.
     if (datesForStreaks
-        .contains(pageViewElementDate.add(const Duration(days: 1)))) {
+        .contains(pageViewElementDate.add(const Duration(days: 1))) && pageViewElementDate.weekday != endWeekdayIndex) {
       if (calendarProperties.enableDenseViewForDates &&
           calendarProperties.enableDenseSplashForDates) {
         return CalendarStreakStartDenseSplashDate(
@@ -81,7 +94,7 @@ class GetSuitableCalendarStreakDateWidget extends StatelessWidget {
 
     /// Called when streak date have a streak date just before.
     if (datesForStreaks
-        .contains(pageViewElementDate.subtract(const Duration(days: 1)))) {
+        .contains(pageViewElementDate.subtract(const Duration(days: 1))) && pageViewElementDate.weekday != startWeekdayIndex) {
       if (calendarProperties.enableDenseViewForDates &&
           calendarProperties.enableDenseSplashForDates) {
         return CalendarStreakEndDenseSplashDate(
