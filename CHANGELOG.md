@@ -1,3 +1,7 @@
+## 1.1.2
+
+* Prevent the streak dates to extend to the next month.
+
 ## 1.1.1
 
 * Prevent the streak dates to extend to the next row.
